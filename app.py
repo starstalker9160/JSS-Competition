@@ -16,6 +16,10 @@ print("[  OK  ] Starting app...")
 def home():
     return render_template("index.html")
 
+@app.route("/donate")
+def donate():
+    return render_template("donate.html")
+
 
 @app.errorhandler(404)
 def not_found_404(e):
@@ -34,8 +38,8 @@ if __name__ == "__main__":
         else:
             print(f"[  OK  ] App initialized successfully; code: {k}")
 
-        app.run(host="127.0.0.1", port=8080, debug=False)
-        # Timer(1, lambda: webbrowser_open("http://127.0.0.1:8080")).start()
+        app.run(host="127.0.0.1", port=5000, debug=True)
+        # Timer(1, lambda: webbrowser_open("http://127.0.0.1:5000")).start()
     except InitializationErr as e:
         print(f"[ FAIL ] Initialization error: {e}")
     except Exception as e:

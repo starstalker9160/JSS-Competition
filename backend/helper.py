@@ -1,5 +1,4 @@
 import os, shutil
-from google import genai
 
 
 def foreplay() -> str:

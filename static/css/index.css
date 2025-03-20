@@ -23,7 +23,7 @@ nav {
     display: flex;
     box-sizing: border-box;
     width: 100%;
-    border: 2px solid #f6f9fb34;
+    border-bottom: 2px solid #f6f9fb34;
 }
 
 main {
@@ -112,11 +112,16 @@ main > article {
     text-transform: uppercase;
 }
 
-
 .article-desc {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 4rem;
     font-size: 1.2rem;
+}
+
+.article-img {
+    padding: 0px;
+    margin: 0px;
+    background-image: url("/static/Assets/1.png");
 }
