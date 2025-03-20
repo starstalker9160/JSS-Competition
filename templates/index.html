@@ -14,56 +14,59 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/fontawesome.min.css') }}">
 
     <link rel="stylesheet" href="/static/css/index.css">
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
     <title>app | Home</title>
 </head>
 <body>
-    <nav>
-        <div id="nav-logo" class="nav-item">
-            <a><i class="fa-solid fa-child-dress"></i></a>
+    <nav data-toggled="false" data-transitionable="false">
+        <div id="nav-logo" class="nav-item"><a href="#">logo</a></div>
+        <div id="nav-mobile">
+            <div id="nav-link" class="nav-item">
+                <a href="#">SHOP</a>
+                <a href="#">COIN</a>
+            </div>
+            <div id="nav-donate" class="nav-item"><a href="#">DONATE</a></div>
         </div>
-        <div id="nav-links" class="nav-item">
-            <a href="/shop">SHOP</a>
-            <a href="/coin">COIN</a>
-        </div>
-        <div id="nav-donate" class="nav-item">
-            <a href="/donate">DONATE</a>
-        </div>
+        <button id="nav-toggle-btn" type="button" onclick="handleNavToggle()">
+                <span>Menu</span>
+                <i class="fa-solid fa-bars"></i>
+        </button>
     </nav>
     <main>
-        <article>
+        <article data-index="0" data-status="active">
             <div class="article-img article-item"></div>
-            <div class="article-desc article-item">Description for thing 1</div>
-            <div class="article-title article-item">Thing 1</div>
+            <div class="article-desc article-item"><p>Description for thing 1</p></div>
+            <div class="article-title article-item"><h2>Thing 1</h2></div>
             <div class="article-nav article-item">
-                <button class="article-nav-btn" type="button" onclick="clickLeft()"> <- </button>
-                <button class="article-nav-btn" type="button" onclick="clickRight()"> -> </button>
+                <button class="article-nav-btn" type="button" onclick="handleLeftClick()"> <- </i></button>
+                <button class="article-nav-btn" type="button" onclick="handleRightClick()"> -> </i></button>
             </div>
         </article>
-        <article>
+        <article data-index="1" data-status="inactive">    
             <div class="article-img article-item"></div>
-            <div class="article-desc article-item">Description for thing 2</div>
-            <div class="article-title article-item">Thing 2</div>
+            <div class="article-desc article-item"><p>Description for thing 2</p></div>
+            <div class="article-title article-item"><h2>Thing 2</h2></div>
             <div class="article-nav article-item">
-                <button class="article-nav-btn" type="button" onclick="clickLeft()"> <- </button>
-                <button class="article-nav-btn" type="button" onclick="clickRight()"> -> </button>
+                <button class="article-nav-btn" type="button" onclick="handleLeftClick()"> <- </i></button>
+                <button class="article-nav-btn" type="button" onclick="handleRightClick()"> -> </i></button>
             </div>
         </article>
-        <article>
+        <article data-index="2" data-status="inactive">    
             <div class="article-img article-item"></div>
-            <div class="article-desc article-item">Description for thing 3</div>
-            <div class="article-title article-item">Thing 3</div>
+            <div class="article-desc article-item"><p>Description for thing 3</p></div>
+            <div class="article-title article-item"><h2>Thing 3</h2></div>
             <div class="article-nav article-item">
-                <button class="article-nav-btn" type="button" onclick="clickLeft()"> <- </button>
-                <button class="article-nav-btn" type="button" onclick="clickRight()"> -> </button>
+                <button class="article-nav-btn" type="button" onclick="handleLeftClick()"> <- </i></button>
+                <button class="article-nav-btn" type="button" onclick="handleRightClick()"> -> </i></button>
             </div>
         </article>
-        <article>
+        <article data-index="3" data-status="inactive">    
             <div class="article-img article-item"></div>
-            <div class="article-desc article-item">Description for thing 4</div>
-            <div class="article-title article-item">Thing 4</div>
+            <div class="article-desc article-item"><p>Description for thing 4</p></div>
+            <div class="article-title article-item"><h2>Thing 4</h2></div>
             <div class="article-nav article-item">
-                <button class="article-nav-btn" type="button" onclick="clickLeft()"> <- </button>
-                <button class="article-nav-btn" type="button" onclick="clickRight()"> -> </button>
+                <button class="article-nav-btn" type="button" onclick="handleLeftClick()"> <- </i></button>
+                <button class="article-nav-btn" type="button" onclick="handleRightClick()"> -> </i></button>
             </div>
         </article>
     </main>
