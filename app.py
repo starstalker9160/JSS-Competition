@@ -20,6 +20,10 @@ def home():
 def donate():
     return render_template("donate.html")
 
+@app.route("/shop")
+def shop():
+    return render_template("shop.html")
+
 
 @app.errorhandler(404)
 def not_found_404(e):
