@@ -24,6 +24,10 @@ def donate():
 def shop():
     return render_template("shop.html")
 
+@app.route("/coin")
+def coin():
+    return render_template("coin.html")
+
 
 @app.errorhandler(404)
 def not_found_404(e):

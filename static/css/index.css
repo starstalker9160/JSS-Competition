@@ -36,9 +36,10 @@ nav {
     display: flex;
     width: 100%;
     border-bottom: 1px solid #ffffff34;
+    user-select: none;
 }
 
-nav .nav-item {
+.nav-item {
     padding: 3rem 2rem;
     display: flex;
     gap: 1rem;

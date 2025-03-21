@@ -13,17 +13,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/fontawesome.min.css') }}">
 
-    <link rel="stylesheet" href="/static/css/index.css">
-    <title>app | Home</title>
+    <link rel="stylesheet" href="/static/css/donate.css">
+    <title>app | Donate</title>
 </head>
 <body>
-    <nav>
-        <div id="nav-logo" class="nav-item">
-            <a href="/">logo</a>
+    <nav data-toggled="false" data-transitionable="false">
+        <div id="nav-logo" class="nav-item"><a href="/">logo</a></div>
+        <div id="nav-mobile">
+            <div id="nav-link" class="nav-item">
+                <a href="/shop">SHOP</a>
+                <a href="/coin">COIN</a>
+            </div>
+            <div id="nav-donate" class="nav-item"><a>DONATE</a></div>
         </div>
+        <button id="nav-toggle-btn" type="button" onclick="handleNavToggle()">
+                <span>Menu</span>
+                <i class="fa-solid fa-bars"></i>
+        </button>
     </nav>
     <main>
-        penis hehehehehehe
     </main>
 </body>
 </html>

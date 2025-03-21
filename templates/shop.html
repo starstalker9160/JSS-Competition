@@ -17,20 +17,21 @@
     <title>app | Shop</title>
 </head>
 <body>
-    <nav>
-        <div id="nav-logo" class="nav-item">
-            <a><i class="fa-solid fa-child-dress"></i></a>
+    <nav data-toggled="false" data-transitionable="false">
+        <div id="nav-logo" class="nav-item"><a href="/">logo</a></div>
+        <div id="nav-mobile">
+            <div id="nav-link" class="nav-item">
+                <a>SHOP</a>
+                <a href="/coin">COIN</a>
+            </div>
+            <div id="nav-donate" class="nav-item"><a href="/donate">DONATE</a></div>
         </div>
-        <div id="nav-links" class="nav-item">
-            <a href="/shop">SHOP</a>
-            <a href="/coin">COIN</a>
-        </div>
-        <div id="nav-donate" class="nav-item">
-            <a href="/donate">DONATE</a>
-        </div>
+        <button id="nav-toggle-btn" type="button" onclick="handleNavToggle()">
+                <span>Menu</span>
+                <i class="fa-solid fa-bars"></i>
+        </button>
     </nav>
     <main>
-        8==================D -
     </main>
 </body>
 </html>

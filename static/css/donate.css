@@ -92,11 +92,7 @@ nav {
 
 #nav-link {
     flex-basis: 50%;
-    gap: 6rem;
-}
-
-#nav-link > a:first-of-type {
-    color: #7e57c2;
+    gap: 6rem; 
 }
 
 main {
