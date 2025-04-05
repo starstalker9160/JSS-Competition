@@ -14,10 +14,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/fontawesome.min.css') }}">
 
-    <link rel="stylesheet" href="{{url_for('static', filename='css/donate.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/thankYou.css')}}">
     <script src="{{url_for('static', filename='js/common.js')}}"></script>
-    <script src="{{url_for('static', filename='js/donate.js')}}"></script>
-    <title>app | Donate</title>
+    <title>app | Thank You</title>
 </head>
 <body>
     <nav data-toggled="false" data-transitionable="false">
@@ -35,16 +34,8 @@
         </button>
     </nav>
     <main>
-        <h2>Donate</h2>
-        <br>
-        <h3>₹<span id="editableAmount" contenteditable="true">0.0</span></h3>
-        <br>
-        <button onclick="window.location.href='/thankYou'" id="donateButton" disabled class="btn">
-            <div class="text-container">
-                <span class="text">Donate</span>
-                <span class="text">Donate</span>
-            </div>
-        </button>
+        <h1>Thank you</h2>
+        <p>Your donation means the world to us :D</p>
     </main>
 </body>
 </html>

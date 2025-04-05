@@ -1,4 +1,4 @@
-html { background-color: #081906; height: 100vh; width: 100vw; margin: 0px; }
+html { background-color: #040a18; height: 100vh; width: 100vw; margin: 0px; }
 
 body {
     box-sizing: border-box;
@@ -14,15 +14,15 @@ body {
 
 a {
     color: #F6F9FB;
-    text-decoration-color: #2A6796;
+    text-decoration-color: #7e57c2;
 }
 
 a:hover {
-    color: #2A6796;
+    color: #7e57c2;
 }
 
 span {
-    color: #2A6796;
+    color: #7e57c2;
 }
 
 ::selection {

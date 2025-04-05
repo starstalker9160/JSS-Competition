@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/fontawesome.min.css') }}">
 
     <link rel="stylesheet" href="/static/css/shop.css">
+    <script src="{{url_for('static', filename='js/common.js')}}"></script>
+    <script src="{{url_for('static', filename='js/shop.js')}}"></script>
     <title>app | Shop</title>
 </head>
 <body>
@@ -32,6 +34,14 @@
         </button>
     </nav>
     <main>
+        <div class="card" id="card">
+            <div class="cardImg"></div>
+            <div class="cardTitle">big dildo</div>
+            <div class="cardBtns">
+                <button>a</button>
+                <button><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </div>
     </main>
 </body>
 </html>

@@ -16,20 +16,14 @@ h1, h2, h3, a, p, span {
     margin: 0px;
 }
 
-h2 {
-    font-size: 3rem;
+h1 {
+    font-weight: 200;
+    font-size: 5rem;
 }
 
-h3 {
-    font-family: "Josefin Sans", sans-serif;
+p {
     font-weight: 200;
-    font-size: 4rem;
-}
-
-#editableAmount {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 200;
-    font-size: 4rem;
+    font-size: 1.8rem;
 }
 
 a {
@@ -109,7 +103,6 @@ nav {
 
 main {
     flex-grow: 1;
-    position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -189,76 +182,4 @@ main {
     #nav-donate {
         padding-bottom: 4rem;
     }
-}
-
-
-.btn {
-    all: unset;
-    font-size: 18px;
-    padding: 0.8rem 3rem;
-    color: black;
-    line-height: 1.5;
-    font-weight: 600;
-    border: 1px solid #7e57c2;
-    border-radius: 1000px;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    cursor: pointer;
-}
-
-.btn::before, .btn::after {
-    content: "";
-    position: absolute;
-    background: #000;
-    background: #7e57c2;
-    width: 100%;
-    height: 102%;
-    pointer-events: none;
-    transform: skew(30deg) translateY(0);
-    transition: transform 0.3s ease;
-    z-index: -1;
-}
-
-.btn::before  {
-    --direction: 1;
-    top: -103%;
-    left: -70%;
-}
-.btn::after {
-    --direction: -1;
-    top: 102%;
-    left: 69%;
-}
-
-.btn:hover::before, .btn:hover::after {
-    transform: skew(30deg) translateY(calc(var(--direction) * 100%));
-}
-
-.text-container {
-    display: block;
-    overflow: hidden;
-    position: relative;
-}
-
-.text {
-    display: block;
-    transition: 0.3s;
-}
-
-.btn:hover .text:nth-child(1) {
-    color: white;
-    translate: 0 80%;
-}
-
-.text:nth-child(2) {
-    color: white;
-    position: absolute;
-    inset: 0;
-    translate: 0 -80%;
-}
-
-.btn:hover .text:nth-child(2) {
-    transition-delay: 0.1s;
-    translate: 0 0;
 }
