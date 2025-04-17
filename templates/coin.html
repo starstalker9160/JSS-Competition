@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/fontawesome.min.css') }}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/coin.css')}}">
+    <script src="{{url_for('static', filename='js/common.js')}}"></script>
+    <title>app | Donate</title>
+</head>
+<body>
+    <nav data-toggled="false" data-transitionable="false">
+        <div id="nav-logo" class="nav-item"><a href="/">logo</a></div>
+        <div id="nav-mobile">
+            <div id="nav-link" class="nav-item">
+                <a href="/shop">SHOP</a>
+                <a>COIN</a>
+            </div>
+            <div id="nav-donate" class="nav-item"><a href="/donate">DONATE</a></div>
+        </div>
+        <button id="nav-toggle-btn" type="button" onclick="handleNavToggle()">
+                <span>Menu</span>
+                <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+    <main>
+        <h2>EduCoin</h2>
+        <br>
+        <p>insert content here</p>
+    </main>
+</body>
+</html>
