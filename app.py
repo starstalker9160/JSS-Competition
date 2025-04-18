@@ -38,6 +38,10 @@ def shop():
 def coin():
     return render_template("coin.html")
 
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
 @app.route("/thankYou")
 def thankYou():
     return render_template("thankYou.html")

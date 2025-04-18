@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/fontawesome.min.css') }}">
 
-    <link rel="stylesheet" href="{{url_for('static', filename='css/coin.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
     <script src="{{url_for('static', filename='js/common.js')}}"></script>
+    <script src="{{url_for('static', filename='js/donate.js')}}"></script>
     <title>app | Donate</title>
 </head>
 <body>
@@ -24,10 +25,10 @@
         <div id="nav-mobile">
             <div id="nav-link" class="nav-item">
                 <a href="/shop">SHOP</a>
-                <a>COIN</a>
+                <a href="/coin">COIN</a>
             </div>
             <div id="nav-donate" class="nav-item">
-                <a href="/donate">DONATE</a>
+                <a>DONATE</a>
                 <a href="/login">LOGIN</a>
             </div>
         </div>
@@ -37,9 +38,12 @@
         </button>
     </nav>
     <main>
-        <h2>EduCoin</h2>
+        <h2>Login</h2>
         <br>
-        <p>insert content here</p>
+        <div class="inputFields">
+            <input class="input" required autocomplete="off" type="text" name="username">
+            <label class="label" for="split">Username</label>
+        </div>
     </main>
 </body>
 </html>

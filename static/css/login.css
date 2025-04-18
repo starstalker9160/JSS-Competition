@@ -1,11 +1,3 @@
-@font-face {
-    font-family: 'MabryPro';
-    src: url('/static/fonts/MabryPro-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
 * { box-sizing: border-box; }
 html { background-color: #040a18; height: 100vh; width: 100vw; margin: 0px; }
 
@@ -17,11 +9,27 @@ body {
     overflow: hidden;
 }
 
-h1, h2, h3, a, p, span, div {
+h1, h2, h3, a, p, span {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     color: #F6F9FB;
     margin: 0px;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200;
+    font-size: 4rem;
+}
+
+#editableAmount {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 200;
+    font-size: 4rem;
 }
 
 a {
@@ -92,10 +100,10 @@ nav {
 
 #nav-link {
     flex-basis: 50%;
-    gap: 6rem;
+    gap: 6rem; 
 }
 
-#nav-link > a:first-of-type {
+#nav-donate > a:last-of-type {
     color: #7e57c2;
 }
 
@@ -104,8 +112,9 @@ main {
     position: relative;
     overflow: hidden;
     display: flex;
-    flex-direction: row;
-    padding: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @media(max-width: 1200px) {    
@@ -182,31 +191,74 @@ main {
     }
 }
 
-main:first-child > .cardImg {
-    background-image: url("/static/Assets/spicy_pics/windEnergy.png");
+
+.btn {
+    all: unset;
+    font-size: 18px;
+    padding: 0.8rem 3rem;
+    color: black;
+    line-height: 1.5;
+    font-weight: 600;
+    border: 1px solid #7e57c2;
+    border-radius: 1000px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    cursor: pointer;
 }
 
-.card {
-    width: 200px;
-    aspect-ratio: 3 / 4;
-    display: flex;
-    flex-direction: column;
-    border-radius: 4px;
-    border: 1px solid #ffffff34;
-    height: fit-content;
-    justify-content: space-between;
+.btn::before, .btn::after {
+    content: "";
+    position: absolute;
+    background: #000;
+    background: #7e57c2;
+    width: 100%;
+    height: 102%;
+    pointer-events: none;
+    transform: skew(30deg) translateY(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
 }
 
-.cardTitle {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.5rem;
+.btn::before  {
+    --direction: 1;
+    top: -103%;
+    left: -70%;
+}
+.btn::after {
+    --direction: -1;
+    top: 102%;
+    left: 69%;
 }
 
-.cardBtns {
-    display: flex;
-    flex-direction: row;
+.btn:hover::before, .btn:hover::after {
+    transform: skew(30deg) translateY(calc(var(--direction) * 100%));
 }
 
-.cardBtns > button {
-    flex-basis: 50%;
+.text-container {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.text {
+    display: block;
+    transition: 0.3s;
+}
+
+.btn:hover .text:nth-child(1) {
+    color: white;
+    translate: 0 80%;
+}
+
+.text:nth-child(2) {
+    color: white;
+    position: absolute;
+    inset: 0;
+    translate: 0 -80%;
+}
+
+.btn:hover .text:nth-child(2) {
+    transition-delay: 0.1s;
+    translate: 0 0;
 }
