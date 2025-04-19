@@ -208,14 +208,14 @@ main {
 
 .btn:hover .text:nth-child(1) {
     color: white;
-    translate: 0 80%;
+    translate: 0 100%;
 }
 
 .text:nth-child(2) {
     color: white;
     position: absolute;
     inset: 0;
-    translate: 0 -80%;
+    translate: 0 -100%;
 }
 
 .btn:hover .text:nth-child(2) {

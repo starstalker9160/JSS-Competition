@@ -101,10 +101,6 @@ nav {
     gap: 6rem; 
 }
 
-#nav-donate > a:last-of-type {
-    color: #7e57c2;
-}
-
 main {
     flex-grow: 1;
     position: relative;
@@ -172,14 +168,14 @@ main {
 
 .btn:hover .text:nth-child(1) {
     color: white;
-    translate: 0 80%;
+    translate: 0 100%;
 }
 
 .text:nth-child(2) {
     color: white;
     position: absolute;
     inset: 0;
-    translate: 0 -80%;
+    translate: 0 -100%;
 }
 
 .btn:hover .text:nth-child(2) {

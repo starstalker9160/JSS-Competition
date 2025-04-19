@@ -101,10 +101,6 @@ nav {
     gap: 6rem; 
 }
 
-#nav-donate > a:last-of-type {
-    color: #7e57c2;
-}
-
 main {
     flex-grow: 1;
     position: relative;
