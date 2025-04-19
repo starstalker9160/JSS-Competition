@@ -98,12 +98,15 @@ main {
     display: flex;
     flex-direction: row;
     padding: 3rem;
+    gap: 2rem;
 }
 
 .card:nth-child(1) > .cardImg {
     background-image: url("/static/Assets/imgs/shop/painting1.jpg");
-    background-position: center;
-    background-size: cover;
+}
+
+.card:nth-child(2) > .cardImg {
+    background-image: url("/static/Assets/imgs/shop/bracelet1.jpg");
 }
 
 @media(max-width: 1200px) {    
@@ -194,10 +197,12 @@ main {
 
 .cardImg {
     flex-grow: 1;
+    background-position: center;
+    background-size: cover;
 }
 
 .cardTitle {
-    flex-basis: calc(100% / 4);
+    flex-basis: calc(100% / 5);
     display: flex;
     align-items: center;
     font-family: "Montserrat", sans-serif;
@@ -205,10 +210,26 @@ main {
 }
 
 .cardBtns {
+    flex-basis: 9%;
     display: flex;
     flex-direction: row;
 }
 
 .cardBtns > button {
     flex-basis: 50%;
+    color: #F6F9FB;
+    background-color: #ffffff00;
+    border: none;
+    border-top: 1px solid #ffffff34;
+    transition: all 200ms ease;
+}
+
+.cardBtns > button:last-of-type {
+    border-left: 1px solid #ffffff34;
+}
+
+.cardBtns > button:hover {
+    cursor: pointer;
+    background-color: #7e57c2;
+    border-color: #7e57c2;
 }
