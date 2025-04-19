@@ -154,19 +154,15 @@ article > .article-item {
 }
 
 article:first-child > .article-img {
-    background-image: url("/static/Assets/spicy_pics/windEnergy.png");
+    background-image: url("/static/Assets/imgs/banners/windEnergy.png");
 }
 
 article:nth-child(2) > .article-img {
-    background-image: url("/static/Assets/spicy_pics/cycle.jpg");
+    background-image: url("/static/Assets/imgs/coin.png");
 }
 
 article:nth-child(3) > .article-img {
-    background-image: url("https://images.unsplash.com/photo-1660580554695-d2ca5008f1f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80");
-}
-
-article:nth-child(4) > .article-img {
-    background-image: url("https://images.unsplash.com/photo-1660766877755-4cac24f6cf21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2232&q=80");
+    background-image: url("/static/Assets/imgs/banners/auto.jpg");
 }
 
 .article-img {
