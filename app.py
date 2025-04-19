@@ -23,7 +23,7 @@ except InitializationErr as e:
 
 
 @app.route("/")
-def home():
+def main():
     return render_template("index.html")
 
 @app.route("/donate")
@@ -41,6 +41,10 @@ def coin():
 @app.route("/login")
 def login():
     return render_template("login.html")
+
+@app.route("/home")
+def home():
+    return render_template("home.html")
 
 @app.route("/thankYou")
 def thankYou():
