@@ -100,6 +100,12 @@ main {
     padding: 3rem;
 }
 
+.card:nth-child(1) > .cardImg {
+    background-image: url("/static/Assets/imgs/shop/painting1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
 @media(max-width: 1200px) {    
     #nav-mobile {
         flex-basis: calc(100% * 0.75);
@@ -174,12 +180,9 @@ main {
     }
 }
 
-main:first-child > .cardImg {
-    background-image: url("/static/Assets/imgs/windEnergy.png");
-}
-
 .card {
-    width: 200px;
+    width: 12vw;
+    height: 100%;
     aspect-ratio: 3 / 4;
     display: flex;
     flex-direction: column;
@@ -189,7 +192,14 @@ main:first-child > .cardImg {
     justify-content: space-between;
 }
 
+.cardImg {
+    flex-grow: 1;
+}
+
 .cardTitle {
+    flex-basis: calc(100% / 4);
+    display: flex;
+    align-items: center;
     font-family: "Montserrat", sans-serif;
     font-size: 1.5rem;
 }
