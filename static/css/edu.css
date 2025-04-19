@@ -13,7 +13,7 @@ body {
     overflow: hidden;
 }
 
-h1, h2, h3, a, p, span {
+h1, h2, h3, h4, a, p, span {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     color: #F6F9FB;
@@ -115,113 +115,61 @@ main {
     align-items: center;
 }
 
-.input-group {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 200;
-    font-size: 1.25rem;
-    position: relative;
+.h {
+    font-size: 2rem;
 }
 
-.input {
-    all: unset;
-    color: #fefefe;
-    padding: 1rem;
-    border: 1px solid #9e9e9e;
-    border-radius: 10px;
-    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+.track {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    margin: 1rem;
+    width: 100vw;
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
 }
-
-.label {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: #d4d4d4;
-    pointer-events: none;
-    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input:focus {
-    border: 1px solid #7e57c2;
-}
-
-.input:is(:focus, :valid) ~ label {
-    transform: translateY(-120%) scale(0.7);
-    background-color: #040a18;
-    padding-inline: 0.3rem;
-    color: #7e57c2;
-}
-
-.btn {
-    all: unset;
-    font-size: 18px;
-    padding: 0.8rem 3rem;
-    color: black;
-    line-height: 1.5;
-    font-weight: 600;
-    border: 1px solid #7e57c2;
-    border-radius: 1000px;
-    position: relative;
+  
+.trackItem {
+    flex: 0 0 auto;
+    aspect-ratio: 3 / 4;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
-    z-index: 0;
+    scroll-snap-align: start;
+    border-radius: 4px;
+    border: 1px solid #ffffff00;
+    transition: all 400ms ease;
+}
+
+.trackItem:hover {
     cursor: pointer;
-    user-select: none;
+    border: 1px solid #7e57c2;
 }
 
-.btn::before, .btn::after {
-    content: "";
-    position: absolute;
-    background: #000;
-    background: #7e57c2;
+.trackItem:hover h4 {
+    background-color: #7e57c2;
+}
+
+.trackItem img {
     width: 100%;
-    height: 102%;
-    pointer-events: none;
-    transform: skew(30deg) translateY(0);
-    transition: transform 0.3s ease;
-    z-index: -1;
-}
-
-.btn::before  {
-    --direction: 1;
-    top: -103%;
-    left: -70%;
-}
-.btn::after {
-    --direction: -1;
-    top: 102%;
-    left: 69%;
-}
-
-.btn:hover::before, .btn:hover::after {
-    transform: skew(30deg) translateY(calc(var(--direction) * 100%));
-}
-
-.text-container {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     display: block;
-    overflow: hidden;
-    position: relative;
 }
-
-.text {
-    display: block;
-    transition: 0.3s;
+  
+.trackItem h4 {
+    flex: 1;
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: #F6F9FBa1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 400ms ease;
 }
-
-.btn:hover .text:nth-child(1) {
-    color: white;
-    translate: 0 80%;
-}
-
-.text:nth-child(2) {
-    color: white;
-    position: absolute;
-    inset: 0;
-    translate: 0 -80%;
-}
-
-.btn:hover .text:nth-child(2) {
-    transition-delay: 0.1s;
-    translate: 0 0;
-}
+  
 
 @media(max-width: 1200px) {    
     #nav-mobile {
@@ -295,76 +243,4 @@ main {
     #nav-donate {
         padding-bottom: 4rem;
     }
-}
-
-
-.btn {
-    all: unset;
-    font-size: 18px;
-    padding: 0.8rem 3rem;
-    color: black;
-    line-height: 1.5;
-    font-weight: 600;
-    border: 1px solid #7e57c2;
-    border-radius: 1000px;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    cursor: pointer;
-}
-
-.btn::before, .btn::after {
-    content: "";
-    position: absolute;
-    background: #000;
-    background: #7e57c2;
-    width: 100%;
-    height: 102%;
-    pointer-events: none;
-    transform: skew(30deg) translateY(0);
-    transition: transform 0.3s ease;
-    z-index: -1;
-}
-
-.btn::before  {
-    --direction: 1;
-    top: -103%;
-    left: -70%;
-}
-.btn::after {
-    --direction: -1;
-    top: 102%;
-    left: 69%;
-}
-
-.btn:hover::before, .btn:hover::after {
-    transform: skew(30deg) translateY(calc(var(--direction) * 100%));
-}
-
-.text-container {
-    display: block;
-    overflow: hidden;
-    position: relative;
-}
-
-.text {
-    display: block;
-    transition: 0.3s;
-}
-
-.btn:hover .text:nth-child(1) {
-    color: white;
-    translate: 0 80%;
-}
-
-.text:nth-child(2) {
-    color: white;
-    position: absolute;
-    inset: 0;
-    translate: 0 -80%;
-}
-
-.btn:hover .text:nth-child(2) {
-    transition-delay: 0.1s;
-    translate: 0 0;
 }

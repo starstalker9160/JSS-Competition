@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/fontawesome.min.css') }}">
 
     <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
-    <script src="{{url_for('static', filename='js/common.js')}}"></script>
+    <script src="{{url_for('static', filename='js/common.min.js')}}"></script>
     <title>app | Login</title>
 </head>
 <body>
@@ -49,7 +49,7 @@
             <label class="label" for="password">Password</label>
         </div>
         <br><br>
-        <button onclick="window.location.href='/thankYou'" id="loginButton" disabled class="btn">
+        <button onclick="window.location.href='/home'" id="loginButton" class="btn">
             <div class="text-container">
                 <span class="text">Sign in</span>
                 <span class="text">Sign in</span>

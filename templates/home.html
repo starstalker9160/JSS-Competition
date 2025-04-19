@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/fontawesome.min.css') }}">
 
-    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
-    <script src="{{url_for('static', filename='js/common.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+    <script src="{{url_for('static', filename='js/common.min.js')}}"></script>
     <title>app | Home</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
             </div>
             <div id="nav-donate" class="nav-item">
                 <a href="/donate">DONATE</a>
-                <a href="/home">PROFILE</a>
+                <a>PROFILE</a>
             </div>
         </div>
         <button id="nav-toggle-btn" type="button" onclick="handleNavToggle()">
@@ -37,24 +37,14 @@
         </button>
     </nav>
     <main>
-        <h2>Login</h2>
-        <br><br>
-        <div class="input-group">
-            <input class="input" required autocomplete="off" type="text" name="username" id="username">
-            <label class="label" for="username">Username</label>
-        </div>
-        <br>
-        <div class="input-group">
-            <input class="input" required autocomplete="off" type="password" name="password" id="password">
-            <label class="label" for="password">Password</label>
-        </div>
-        <br><br>
-        <button onclick="window.location.href='/thankYou'" id="loginButton" disabled class="btn">
-            <div class="text-container">
-                <span class="text">Sign in</span>
-                <span class="text">Sign in</span>
+        <h2>Welcome back <span class="username">User</span> 👋</h2>
+        <div class="content">
+            <div class="left"></div>
+            <div class="right">
+                <div class="top"></div>
+                <div class="bottom"></div>
             </div>
-        </button>
+        </div>
     </main>
 </body>
 </html>

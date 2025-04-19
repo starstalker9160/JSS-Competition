@@ -2,9 +2,11 @@ import sys
 from threading import Timer
 from backend.helper import *
 from backend.exceptions import *
+from jinja2 import TemplateNotFound
 from webbrowser import open as webbrowser_open
 from flask import (
     Flask,
+    abort,
     render_template
 )
 
@@ -45,6 +47,13 @@ def login():
 @app.route("/home")
 def home():
     return render_template("home.html")
+
+@app.route("/services/<name>")
+def services(name):
+    try:
+        return render_template(f"{name}.html")
+    except TemplateNotFound:
+        abort(404)
 
 @app.route("/thankYou")
 def thankYou():
