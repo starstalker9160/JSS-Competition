@@ -104,11 +104,18 @@ nav {
 main {
     flex-grow: 1;
     position: relative;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+}
+
+.k {
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
 }
 
 .btn {
