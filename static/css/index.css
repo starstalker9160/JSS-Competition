@@ -101,6 +101,16 @@ main {
     overflow: hidden;
 }
 
+.k {
+    color: #F6F9FB;
+    text-decoration-color: #7e57c2;
+    text-decoration: underline;
+}
+
+.k:hover {
+    color: #7e57c2;
+}
+
 article {
     height: 100%;
     width: 100%;
