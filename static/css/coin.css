@@ -16,8 +16,10 @@ h1, h2, h3, a, p, span, div {
     margin: 0px;
 }
 
-h2 {
-    font-size: 3rem;
+p {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
 }
 
 a {
